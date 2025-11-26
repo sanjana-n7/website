@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <p></p>
+    <meta charset="utf-8">
+    <title><!-- FULL_NAME: -->Sanjana N — Resume &amp; Biodata</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="<!-- DESCRIPTION: Short description about FULL_NAME -->">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <!-- JSON-LD Person (replace placeholders) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sanjana N",
+        "jobTitle": "Full",
+        "email": "sanjana.n7124@gmail.com"
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main"></a>
+
+    <header class="site-header" role="banner">
+        <h2 class="site-logo"><small><!-- INSERT SITE / LOGO TEXT -->MySite</small></h2>
+
+        <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="visually-hidden"></span>
+        </button>
+
+        <nav id="main-nav" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" role="main">
+        <section class="hero" aria-label="Hero">
+            <figure class="profile-photo" aria-hidden="false">
+                <!-- INSERT PROFILE PHOTO at assets/images/profile.jpg -->
+                <img src="assets/images/profile.jpg" alt="Profile photo of Sanjana N">
+                <figcaption class="visually-hidden">Sanjana N</figcaption>
+            </figure>
+
+            <article class="hero-content">
+                <h1><!-- INSERT NAME -->Sanjana N</h1>
+                <h2><!-- ROLE / TAGLINE -->Full stack developer</h2>
+                <p>Programmer skilled in both front-end and back-end development.</p>
+
+                <p class="cta">
+                    <a class="cta resume" href="resume.html">View Resume</a>
+                    <a class="cta biodata" href="biodata.html">View Biodata</a>
+                </p>
+            </article>
+        </section>
+
+        <section class="highlights" aria-label="Highlights">
+            <!-- Highlight 1 -->
+            <section aria-labelledby="hl-1" class="highlight-card">
+                <h3 id="hl-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img">
+                        <rect x="3" y="7" width="18" height="10" rx="2" fill="currentColor"></rect>
+                        <rect x="8" y="3" width="8" height="4" rx="1" fill="currentColor"></rect>
+                    </svg>
+                    Fresher
+                </h3>
+            </section>
+
+            <!-- Highlight 2 -->
+            <section aria-labelledby="hl-2" class="highlight-card">
+                <h3 id="hl-2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img">
+                        <path d="M8 7l-4 5 4 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M16 7l4 5-4 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12 4v16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    JS • React • HTML
+                </h3>
+            </section>
+
+            <!-- Highlight 3 -->
+            <section aria-labelledby="hl-3" class="highlight-card">
+                <h3 id="hl-3">
+                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="currentColor"></path>
+                        <circle cx="12" cy="9" r="2.5" fill="#fff"></circle>
+                    </svg>
+                    Open to Relocate
+                </h3>
+            </section>
+
+            <!-- Highlight 4 -->
+            <section aria-labelledby="hl-4" class="highlight-card">
+                <h3 id="hl-4">
+                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img">
+                        <circle cx="12" cy="8" r="3" fill="currentColor"></circle>
+                        <path d="M4 20c1.5-4 6-6 8-6s6.5 2 8 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    Available for hire
+                </h3>
+            </section>
+        </section>
+
+        <section id="contact" aria-label="Contact">
+            <h2>Contact</h2>
+
+            <address class="contact-summary">
+                <!-- Replace placeholders -->
+                <a href="mailto:sanjana.n7124@gmail.com">sanjana.n7124@gmail.com</a><br>
+                <a href="tel:7022717541">7022717541</a>
+            </address>
+
+            <!-- Contact form (non-submitting; JS will handle) -->
+            <form id="contact-form" action="#" method="post" novalidate aria-label="Contact form" onsubmit="event.preventDefault();">
+                <!-- INSERT NAME -->
+                <label for="name">Sanjana N</label>
+                <input id="name" name="name" type="text" required aria-required="true" />
+
+                <!-- INSERT EMAIL -->
+                <label for="email">sanjana.n7124@gmail.com</label>
+                <input id="email" name="email" type="email" required aria-required="true" />
+
+                <!-- INSERT MESSAGE -->
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <p>&copy; <span aria-hidden="true">2025</span> <!-- FULL_NAME: -->Sanjana N</p>
+        <p><a href="#contact">Contact</a> • <a href="index.html">Home</a></p>
+        <p class="credits"> <!-- CREDITS: Replace as needed --></p>
+    </footer>
+
+    <!-- Acceptance checklist:
+        - has skip link
+        - <main id="main"> exists
+        - header nav includes links to resume.html and biodata.html
+        - hero has image, H1, tagline and two CTAs
+        - contact form snippet present
+    -->
+    <script>
+    (function(){
+        var navToggle = document.querySelector('.nav-toggle');
+        var mainNav = document.getElementById('main-nav');
+        if (!navToggle || !mainNav) return;
+        var sr = navToggle.querySelector('.visually-hidden');
+
+        // establish initial hidden state for the nav (mobile-first)
+        var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        mainNav.hidden = !expanded;
+
+        navToggle.addEventListener('click', function(){
+            var isExpanded = this.getAttribute('aria-expanded') === 'true';
+            var next = !isExpanded;
+            this.setAttribute('aria-expanded', String(next));
+            this.setAttribute('aria-label', next ? 'Close navigation' : 'Open navigation');
+            if (sr) sr.textContent = next ? 'Close main navigation' : 'Open main navigation';
+            mainNav.classList.toggle('is-open', next);
+            mainNav.hidden = !next;
+        });
+
+        // close via Escape key
+        document.addEventListener('keydown', function(e){
+            if (e.key === 'Escape'){
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.setAttribute('aria-label', 'Open navigation');
+                if (sr) sr.textContent = 'Open main navigation';
+                mainNav.classList.remove('is-open');
+                mainNav.hidden = true;
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

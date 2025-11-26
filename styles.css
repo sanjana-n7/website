@@ -1,0 +1,177 @@
+/* Modern stylesheet: improved typography, layout, and components */
+
+:root{
+    --gap: 1rem;
+    --radius: 10px;
+    --max-width: 1100px;
+    --accent: #0a66c2; /* primary accent */
+    --muted: #6b7280;
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --text: #0f172a;
+} 
+
+ Helper: screen-reader only
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+    border: 0; padding: 0; margin: -1px;
+} 
+
+ Global layout
+html,body{height:100%;}
+body{
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    margin:0;
+    color:var(--text);
+    background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+} 
+
+Center page horizontally and give a comfortable top offset
+   Use flex on the root to center small pages but keep natural flow for long pages */
+body > .container{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column; /* stack header, main, footer */
+    justify-content:space-between; /* header at top, footer at bottom */
+    padding:2rem 1rem;
+}
+
+.container{
+    width:100%;
+    max-width:var(--max-width);
+}
+
+/* Header */
+.site-header{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:var(--gap);
+    padding:0.6rem 0.75rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius:12px;
+    box-shadow: 0 8px 24px rgba(10,102,194,0.08);
+} */
+.site-logo{ font-weight:700; color:#fff; margin:0; }
+.nav-toggle{ background:transparent; border:0; padding:0.25rem; cursor:pointer; color:currentColor; }
+
+/* Horizontal navigation bar (desktop & tablet) */
+header nav{
+    display:block;
+}
+header nav ul{
+    display:flex;
+    gap:1rem;
+    align-items:center;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+header nav li{ margin:0; }
+header nav a{
+    color: rgba(255,255,255,0.95);
+    text-decoration:none;
+    padding:.35rem .6rem;
+    border-radius:8px;
+    font-weight:600;
+    transition: background-color 160ms ease, color 160ms ease, transform 120ms ease;
+}
+header nav a:hover, header nav a:focus{
+    background: rgba(255,255,255,0.12);
+    color:#fff;
+    transform: translateY(-2px);
+}
+header nav a[aria-current="page"]{
+    background: rgba(255,255,255,0.18);
+    color:#fff;
+}
+
+/* Ensure mobile/nav toggle opened menu matches accent background */
+#main-nav, #main-nav.is-open{
+    background: var(--accent);
+    padding: .5rem;
+    border-radius:8px;
+}
+#main-nav a{ color: rgba(255,255,255,0.95); }
+
+/* Main layout — hero + highlights */
+main#main{
+    background: transparent;
+}
+.hero{
+    display:flex; gap:1.25rem; align-items:center; padding:1.25rem; background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4)); border-radius:var(--radius);
+    box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+.profile-photo{ flex:0 0 auto; }
+.profile-photo img{
+    display:block;
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%; /* make circular */
+    box-shadow:0 6px 14px rgba(2,6,23,0.08);
+    transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease;
+}
+
+/* Hover / focus effects for profile */
+.profile-photo:hover img, .profile-photo:focus-within img{
+    transform: translateY(-6px) scale(1.03);
+    box-shadow:0 18px 40px rgba(2,6,23,0.14);
+}
+
+.hero-content h1{ margin:0; font-size:1.6rem; letter-spacing:-0.01em; }
+.hero-content h2{ margin:.25rem 0 0 0; color:var(--muted); font-weight:600; font-size:1rem; }
+.hero-content p{ margin:.6rem 0; color:var(--muted); }
+
+.cta{ margin-top:.8rem; display:flex; gap:.5rem; }
+.cta .resume, .cta .biodata{ text-decoration:none; padding:.5rem .85rem; border-radius:8px; font-weight:600; color:#fff; background:var(--accent); box-shadow:0 6px 14px rgba(10,102,194,0.12); transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease; }
+.cta .biodata{ background:transparent; color:var(--accent); border:1px solid rgba(10,102,194,0.12); color:var(--accent); box-shadow:none; }
+
+/* CTA hover/focus */
+.cta .resume:hover, .cta .resume:focus,
+.cta .biodata:hover, .cta .biodata:focus{
+    transform: translateY(-4px);
+    box-shadow:0 14px 30px rgba(10,102,194,0.12);
+}
+
+/* Highlights grid */
+.highlights{ display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:1rem; margin-top:1rem; }
+.highlight-card{ background:var(--card); padding:.85rem; border-radius:10px; display:flex; align-items:center; gap:.6rem; box-shadow:0 6px 18px rgba(2,6,23,0.04); transition: transform 200ms ease, box-shadow 200ms ease; }
+.highlight-card svg{ width:28px; height:28px; color:var(--accent); flex:0 0 28px; }
+.highlight-card h3{ margin:0; font-size:0.95rem; font-weight:600; color:var(--text); }
+
+/* Highlight card hover */
+.highlight-card:hover{
+    transform: translateY(-6px);
+    box-shadow:0 20px 40px rgba(2,6,23,0.06);
+}
+
+/* Contact & Form */
+#contact{ margin-top:1.25rem; }
+#contact form{ display:grid; gap:.5rem; background:var(--card); padding:1rem; border-radius:10px; box-shadow:0 6px 18px rgba(2,6,23,0.04); }
+#contact label{ font-size:.85rem; color:var(--muted); }
+#contact input, #contact textarea{ padding:.5rem; border-radius:8px; border:1px solid #e6eef8; }
+#contact button{ padding:.6rem .9rem; border-radius:8px; border:0; background:var(--accent); color:#fff; font-weight:700; cursor:pointer; }
+
+/* Footer */
+.site-footer{ margin-top:1rem; text-align:center; color:var(--muted); font-size:.9rem; }
+
+/* Responsive adjustments */
+@media (max-width:800px){
+    .hero{ flex-direction:column; align-items:center; text-align:center; }
+    .hero-content h1{ font-size:1.4rem; }
+    .profile-photo img{ width:120px; height:120px; }
+    .highlights{ grid-template-columns:1fr; }
+}
+
+/* Accessibility: show nav at wider widths */
+@media (min-width:700px){
+    #main-nav{ display:block !important; }
+}
+ */

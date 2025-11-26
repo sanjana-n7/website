@@ -1,0 +1,682 @@
+--- index.html ---
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Personal website — Resume and Biodata. Professional landing page with highlights and contact." />
+    <meta name="author" content="<!-- INSERT NAME -->" />
+    <title><!-- INSERT NAME --> — Resume & Biodata</title>
+
+    <!-- Open Graph (basic) -->
+    <meta property="og:title" content="<!-- INSERT NAME --> — Resume & Biodata" />
+    <meta property="og:description" content="Professional resume, biodata and contact." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Home"><!-- INSERT NAME --></a>
+            <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <nav id="siteNav" class="site-nav" role="navigation" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="biodata.html">Biodata</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-inner">
+                <img src="assets/photo.jpg" alt="Portrait of <!-- INSERT NAME -->" class="hero-photo" />
+                <div class="hero-body">
+                    <h1 id="hero-title"><!-- INSERT NAME --></h1>
+                    <p class="tagline"><!-- Short professional tag-line or bio (e.g., Product Designer, Frontend Engineer) --></p>
+                    <p class="summary"> <!-- Short 1-2 sentence summary -->
+                        <!-- INSERT SHORT BIO -->
+                    </p>
+
+                    <div class="highlights" aria-label="Highlights">
+                        <strong>Highlights</strong>
+                        <ul>
+                            <li><!-- Skill / accomplishment 1 --></li>
+                            <li><!-- Skill / accomplishment 2 --></li>
+                            <li><!-- Skill / accomplishment 3 --></li>
+                        </ul>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a class="btn" href="resume.html">View Resume</a>
+                        <a class="btn outline" href="biodata.html">View Biodata</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+            <p>Use the form to reach out. Replace placeholders with your email and other details.</p>
+
+            <form id="contactForm" class="contact-form" novalidate>
+                <label for="name">Name <span aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" required placeholder="Your name" />
+
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Short message"></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Send</button>
+                    <button type="reset" class="btn outline">Reset</button>
+                </div>
+                <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; <span id="year"></span> <!-- INSERT NAME -->. All rights reserved.</p>
+            <p class="small">Built with semantic HTML, accessible markup and responsive CSS.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+
+--- resume.html ---
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Full resume of <!-- INSERT NAME -->. Profile, experience, education, skills, certifications, projects." />
+    <title><!-- INSERT NAME --> — Resume</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <a class="skip-link" href="#resume">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">← Home</a>
+            <nav class="site-nav" role="navigation" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biodata.html">Biodata</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="resume" class="container resume-page" aria-labelledby="resume-title">
+        <header class="resume-header">
+            <div>
+                <h1 id="resume-title"><!-- INSERT NAME --></h1>
+                <p class="muted"><!-- Job title or professional label --></p>
+            </div>
+            <div class="resume-actions">
+                <button id="printResume" class="btn">Download as PDF</button>
+                <a href="mailto:<!-- INSERT EMAIL -->" class="btn outline">Contact</a>
+            </div>
+        </header>
+
+        <section class="profile" aria-labelledby="profile-title">
+            <h2 id="profile-title">Profile</h2>
+            <p><!-- Short professional summary (2–4 sentences). --></p>
+        </section>
+
+        <section class="resume-grid">
+            <article class="experience" aria-labelledby="exp-title">
+                <h2 id="exp-title">Experience</h2>
+
+                <div class="exp-item">
+                    <h3><!-- Job Title 1 --></h3>
+                    <p class="meta"><strong><!-- Company 1 --></strong> — <span class="muted">Start — End</span></p>
+                    <ul>
+                        <li><!-- Key responsibility or achievement --></li>
+                        <li><!-- Key responsibility or achievement --></li>
+                        <li><!-- Key responsibility or achievement --></li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <h3><!-- Job Title 2 --></h3>
+                    <p class="meta"><strong><!-- Company 2 --></strong> — <span class="muted">Start — End</span></p>
+                    <ul>
+                        <li><!-- Key responsibility or achievement --></li>
+                        <li><!-- Key responsibility or achievement --></li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <h3><!-- Job Title 3 --></h3>
+                    <p class="meta"><strong><!-- Company 3 --></strong> — <span class="muted">Start — Present</span></p>
+                    <ul>
+                        <li><!-- Key responsibility or achievement --></li>
+                        <li><!-- Key responsibility or achievement --></li>
+                    </ul>
+                </div>
+            </article>
+
+            <aside class="sidebar">
+                <section aria-labelledby="edu-title">
+                    <h2 id="edu-title">Education</h2>
+                    <div class="edu-item">
+                        <strong><!-- Degree, Institution 1 --></strong>
+                        <p class="muted">Year — Year</p>
+                        <p><!-- Short note or honors --></p>
+                    </div>
+                    <div class="edu-item">
+                        <strong><!-- Degree, Institution 2 --></strong>
+                        <p class="muted">Year — Year</p>
+                    </div>
+                </section>
+
+                <section aria-labelledby="skills-title">
+                    <h2 id="skills-title">Skills</h2>
+                    <div class="skills">
+                        <!-- Use badges; replace with your skills -->
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">React</span>
+                        <span class="badge">Accessibility</span>
+                    </div>
+                </section>
+
+                <section aria-labelledby="cert-title">
+                    <h2 id="cert-title">Certifications</h2>
+                    <ul>
+                        <li><!-- Certification 1 — Issuer (Year) --></li>
+                        <li><!-- Certification 2 — Issuer (Year) --></li>
+                    </ul>
+                </section>
+            </aside>
+        </section>
+
+        <section class="projects" aria-labelledby="proj-title">
+            <h2 id="proj-title">Selected Projects</h2>
+            <ul>
+                <li>
+                    <strong><!-- Project Title 1 --></strong> — <span class="muted">Short summary and link if any</span>
+                </li>
+                <li>
+                    <strong><!-- Project Title 2 --></strong> — <span class="muted">Short summary and link if any</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="yearResume"></span> <!-- INSERT NAME --></p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+
+--- biodata.html ---
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Biodata of <!-- INSERT NAME -->. Personal details, family, languages and hobbies." />
+    <title><!-- INSERT NAME --> — Biodata</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <a class="skip-link" href="#biodata">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">← Home</a>
+            <nav class="site-nav" role="navigation" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="biodata" class="container biodata-page" aria-labelledby="biodata-title">
+        <header class="biodata-header">
+            <h1 id="biodata-title"><!-- INSERT NAME --></h1>
+            <p class="muted">Biodata</p>
+        </header>
+
+        <section class="biodata-grid">
+            <div class="biodata-card personal">
+                <h2>Personal Details</h2>
+                <dl>
+                    <dt>Full Name</dt><dd><!-- INSERT NAME --></dd>
+                    <dt>Date of Birth</dt><dd><!-- DD MMM YYYY --></dd>
+                    <dt>Gender</dt><dd><!-- Male / Female / Other --></dd>
+                    <dt>Marital Status</dt><dd><!-- Single / Married --></dd>
+                    <dt>Nationality</dt><dd><!-- Country --></dd>
+                </dl>
+            </div>
+
+            <div class="biodata-card contact">
+                <h2>Contact</h2>
+                <dl>
+                    <dt>Email</dt><dd><!-- email@example.com --></dd>
+                    <dt>Phone</dt><dd><!-- +1 555 555 555 --></dd>
+                    <dt>Address</dt><dd><!-- Street, City, State, ZIP, Country --></dd>
+                </dl>
+            </div>
+
+            <div class="biodata-card family">
+                <h2>Family Details</h2>
+                <dl>
+                    <dt>Father</dt><dd><!-- Father's name & occupation --></dd>
+                    <dt>Mother</dt><dd><!-- Mother's name & occupation --></dd>
+                    <dt>Siblings</dt><dd><!-- Names or count --></dd>
+                </dl>
+            </div>
+
+            <div class="biodata-card languages">
+                <h2>Languages</h2>
+                <ul>
+                    <li><!-- Language 1 — Proficiency --></li>
+                    <li><!-- Language 2 — Proficiency --></li>
+                </ul>
+            </div>
+
+            <div class="biodata-card hobbies">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li><!-- Hobby 1 --></li>
+                    <li><!-- Hobby 2 --></li>
+                </ul>
+            </div>
+
+            <div class="biodata-card signature">
+                <h2>Signature</h2>
+                <p class="signature-box" aria-hidden="true"><!-- Handwritten signature image or leave blank for print sign --></p>
+                <p class="muted">Place for signature and date when printing.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="yearBio"></span> <!-- INSERT NAME --></p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+
+--- styles.css ---
+:root{
+    --bg:#f7f8fb;
+    --card:#ffffff;
+    --accent:#0b74de;
+    --muted:#6b7280;
+    --text:#0f1724;
+    --radius:10px;
+    --max-width:1000px;
+    --gap:1rem;
+    --flow:1.25rem;
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    --print-font: "Times New Roman", Times, serif;
+    --print-size: 12pt;
+}
+
+/* Basic reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family:var(--font-sans);
+    color:var(--text);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.45;
+    font-size:16px;
+}
+
+/* Containers */
+.container{
+    width:clamp(280px, 92%, var(--max-width));
+    margin-left:auto;
+    margin-right:auto;
+    padding:1rem;
+}
+
+/* Skip link */
+.skip-link{
+    position:absolute;
+    left:-999px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+.skip-link:focus{
+    position:static;
+    margin:0.5rem;
+    padding:0.5rem 0.75rem;
+    background:var(--accent);
+    color:white;
+    border-radius:6px;
+    width:auto;
+    height:auto;
+    clip:auto;
+}
+
+/* Header */
+.site-header{
+    background:transparent;
+    padding:0.5rem 0;
+}
+.header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:var(--gap);
+}
+.brand{
+    font-weight:700;
+    color:var(--text);
+    text-decoration:none;
+}
+.site-nav ul{
+    display:flex;
+    gap:0.75rem;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.site-nav a{
+    color:var(--text);
+    text-decoration:none;
+    padding:0.35rem 0.5rem;
+    border-radius:6px;
+}
+.site-nav a:focus,
+.site-nav a:hover{
+    background:rgba(11,116,222,0.08);
+    outline:none;
+}
+
+/* Mobile nav toggle */
+.nav-toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.5rem;
+    border:0;
+    background:transparent;
+    font-size:1.25rem;
+}
+@media (min-width:900px){
+    .nav-toggle{ display:none; }
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(180deg, rgba(11,116,222,0.06), transparent);
+    border-radius:var(--radius);
+    padding:1rem;
+    margin:1rem 0;
+}
+.hero-inner{
+    display:flex;
+    gap:var(--gap);
+    align-items:center;
+    flex-direction:column;
+}
+.hero-photo{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:999px;
+    border:4px solid var(--card);
+    box-shadow:0 6px 18px rgba(15,23,36,0.06);
+}
+.hero-body{ text-align:center; }
+.tagline{ color:var(--accent); font-weight:600; margin-top:0.25rem; }
+.highlights ul{ margin:0.25rem 0 0; padding-left:1.25rem; color:var(--muted); text-align:left; display:inline-block; }
+
+/* Buttons */
+.btn{
+    display:inline-block;
+    padding:0.5rem 0.75rem;
+    background:var(--accent);
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    border:0;
+    cursor:pointer;
+    font-weight:600;
+}
+.btn.outline,
+.btn.outline:visited{
+    background:transparent;
+    color:var(--accent);
+    border:1px solid rgba(11,116,222,0.12);
+}
+
+/* Contact form */
+.contact-form{
+    display:grid;
+    gap:0.5rem;
+    margin:1rem 0 2rem;
+}
+.contact-form label{ font-weight:600; font-size:0.95rem; }
+.contact-form input,
+.contact-form textarea{
+    padding:0.5rem;
+    border-radius:8px;
+    border:1px solid #e6e9ef;
+    background:white;
+    font:inherit;
+}
+.form-actions{ display:flex; gap:0.5rem; margin-top:0.25rem; }
+.form-feedback{ color:var(--accent); }
+
+/* Resume & Biodata layout */
+.resume-page .resume-header,
+.biodata-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:var(--gap);
+    margin:0.75rem 0;
+}
+.resume-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:1rem;
+}
+.experience{ background:var(--card); padding:1rem; border-radius:var(--radius); }
+.sidebar{ display:block; background:var(--card); padding:1rem; border-radius:var(--radius); }
+.exp-item + .exp-item{ margin-top:1rem; }
+.badge{
+    display:inline-block;
+    background:rgba(11,116,222,0.08);
+    color:var(--accent);
+    padding:0.25rem 0.5rem;
+    border-radius:999px;
+    font-weight:600;
+    margin:0 0.25rem 0.25rem 0;
+}
+
+/* Biodata grid */
+.biodata-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:1rem;
+}
+.biodata-card{ background:var(--card); padding:1rem; border-radius:var(--radius); }
+.biodata-card dl{ margin:0; display:grid; gap:0.25rem; grid-template-columns: 150px 1fr; }
+.signature-box{
+    min-height:60px;
+    border:1px dashed #ddd;
+    border-radius:6px;
+    padding:0.5rem;
+}
+
+/* Utility */
+.muted{ color:var(--muted); font-size:0.95rem; }
+.small{ font-size:0.85rem; color:var(--muted); }
+
+/* Focus states */
+a:focus, button:focus, input:focus, textarea:focus{
+    outline:3px solid rgba(11,116,222,0.18);
+    outline-offset:2px;
+}
+
+/* Larger screens layout */
+@media (min-width:900px){
+    .hero-inner{ flex-direction:row; align-items:center; text-align:left; }
+    .resume-grid{
+        grid-template-columns: 1fr 320px;
+        align-items:start;
+    }
+    .biodata-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .container{ padding:1.5rem; }
+}
+
+/* Print styles for Resume and Biodata (A4 portrait) */
+@media print{
+    :root{ font-family: var(--print-font); font-size:var(--print-size); }
+    body{ background:white; color:black; }
+    .site-header, .site-footer, .nav-toggle, .site-nav, .btn, .skip-link, .contact-form, .hero-actions{ display:none !important; }
+    .container{ width:100%; max-width:100%; padding:0; margin:0; }
+    .resume-page, .biodata-page{ padding:0.5in; }
+    .resume-grid{ grid-template-columns: 1fr 240px; gap:0.5rem; }
+    .biodata-grid{ grid-template-columns: 1fr; }
+    @page{ size: A4 portrait; margin: 20mm; }
+}
+
+/* Small accessibility tweak for reduced motion */
+@media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; animation: none !important; }
+}
+
+--- script.js ---
+// Minimal JS for interactivity and accessibility
+document.addEventListener('DOMContentLoaded', function () {
+    // Set current year in footers
+    const yearEls = [document.getElementById('year'), document.getElementById('yearResume'), document.getElementById('yearBio')];
+    yearEls.forEach(el => { if (el) el.textContent = new Date().getFullYear(); });
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    if (navToggle && siteNav) {
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            siteNav.style.display = expanded ? '' : 'block';
+        });
+        // Hide nav on wider screens (CSS handles it) — ensure style reset on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 900) siteNav.style.display = '';
+            else siteNav.style.display = navToggle.getAttribute('aria-expanded') === 'true' ? 'block' : 'none';
+        });
+    }
+
+    // Smooth scrolling for internal anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                target.focus({ preventScroll: true });
+            }
+        });
+    });
+
+    // Print/Download resume button
+    const printBtn = document.getElementById('printResume');
+    if (printBtn) {
+        printBtn.addEventListener('click', function () {
+            // Use the browser print dialog to generate a PDF.
+            // For finer control or server-generated PDFs, replace this with a library or server endpoint.
+            window.print();
+        });
+    }
+
+    // Simple contact form validation (if present)
+    const contactForm = document.getElementById('contactForm');
+    const formFeedback = document.getElementById('formFeedback');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = contactForm.name.value.trim();
+            const email = contactForm.email.value.trim();
+            if (!name || !email) {
+                formFeedback.textContent = 'Please provide your name and a valid email.';
+                return;
+            }
+            // Minimal email pattern check
+            const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            if (!emailValid) {
+                formFeedback.textContent = 'Please enter a valid email address.';
+                return;
+            }
+            // Here you would submit the form via fetch/XHR to your backend or service
+            formFeedback.textContent = 'Thanks — your message has been recorded (demo).';
+            contactForm.reset();
+        });
+    }
+});
+
+--- README.md ---
+# Resume + Biodata Website (Scaffold)
+
+This repository contains a small, professional, multi-page Resume + Biodata website scaffold with accessible, responsive HTML/CSS/JS.
+
+Files:
+- index.html — Landing page with photo, short bio, highlights and contact form.
+- resume.html — Detailed resume; includes "Download as PDF" (uses window.print).
+- biodata.html — Classic biodata layout.
+- styles.css — Modern, mobile-first CSS with print styles for A4 portrait.
+- script.js — Mobile nav toggle, smooth scroll, print trigger, basic form validation.
+
+How to preview locally:
+1. Place the files in a folder. Add your photo at `assets/photo.jpg` or update the image path in HTML.
+2. Open `index.html` (or other pages) in your browser. For best results use a local static server:
+     - Python 3: `python -m http.server 8000` then visit http://localhost:8000
+     - Node (serve): `npx serve` or any static server.
+
+Accessibility & print:
+- Skip link, focus outlines, aria attributes included.
+- Print styles configured for A4 portrait. Use "Download as PDF" on the Resume page to open print dialog.
+
+Deploy:
+- Vercel: Connect the repo and deploy (auto-detect static site). No build step required.
+- Netlify: Drag & drop the folder in Netlify Drop or connect the repo and set publish directory to the repo root.
+
+Customization:
+- Replace all <!-- INSERT ... --> placeholders with your real data.
+- For production PDF generation with consistent layout consider server-side PDF generation (Puppeteer, wkhtmltopdf) or a client library (jsPDF / html2pdf) — note these may need extra configuration.
+
+License:
+- This scaffold is provided as-is. Customize freely.
